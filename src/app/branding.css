@@ -1,0 +1,39 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  line-height: 1;
+}
+
+.brand::before {
+  content: "";
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  border-radius: 50%;
+  background: url("/spondon-sharod-somman-2026.png") center / contain no-repeat;
+  filter: drop-shadow(0 3px 7px rgba(83, 29, 43, .16));
+}
+
+.sidebar .brand::before {
+  width: 58px;
+  height: 58px;
+  flex-basis: 58px;
+}
+
+@media (max-width: 800px) {
+  .admin .sidebar {
+    display: flex;
+    align-items: center;
+    min-height: 76px;
+    padding: 9px 18px;
+  }
+  .admin .side-links { display: none; }
+  .admin .sidebar .brand::before { width: 54px; height: 54px; flex-basis: 54px; }
+}
+
+@media (max-width: 520px) {
+  .brand { font-size: 22px; gap: 8px; }
+  .brand::before { width: 46px; height: 46px; flex-basis: 46px; }
+  .brand small { font-size: 7px; letter-spacing: 1.2px; }
+}
