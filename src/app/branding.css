@@ -11,7 +11,7 @@
   height: 54px;
   flex: 0 0 54px;
   border-radius: 50%;
-  background: url("/spondon-sharod-somman-2026.png") center / contain no-repeat;
+  background: url("https://raw.githubusercontent.com/sandipanchaudhuri-dev/spondon-saas/main/public/spondon-sharod-somman-2026.png") center / contain no-repeat;
   filter: drop-shadow(0 3px 7px rgba(83, 29, 43, .16));
 }
 
