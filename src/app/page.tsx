@@ -8,7 +8,6 @@ const ambassadors = [
 
 const partners = [
   ["পাঁচফোড়ন", "Powered By", "/panchforon.jpg"],
-  ["Bong Series", "Associate Partner", "/bong-series.jpg"],
   ["Minu Fashions", "Wardrobe Partner", "/minu.jpg"],
   ["Panache Production Pvt Ltd", "Associate Partner", "/panache.jpg"],
   ["Sera Bangla TV", "Media Partner", "/serabangla.jpg"],
@@ -18,7 +17,7 @@ export default function Home() {
   return <main className="site-shell">
     <header className="public-header">
       <Link className="brand-lockup" href="/"><img src="/spondon-sharod-somman-2026.png" alt="Spondon"/><span><strong>Spondon</strong><small>Sharod Samman 2026</small></span></Link>
-      <div className="header-actions"><div className="aiffa-member"><span>Affiliated by</span><img src="/aiffa.jpg" alt="AIFFA"/></div><Link className="button header-cta" href="/register">Register Your Pujo</Link></div>
+      <div className="header-actions"><div className="aiffa-member"><span>Member of</span><img src="/aiffa.jpg" alt="AIFFA"/></div><Link className="button header-cta" href="/register">Register Your Pujo</Link></div>
     </header>
     <section className="brand-hero"><img src="/spondon-hero.png" alt="Spondon Sharod Samman 2026"/></section>
     <section className="home-callout"><div><span className="eyebrow">Spondon Sharod Samman 2026</span><h1>Register your Pujo.</h1><p>Registration is now open for Pujo committees participating in Spondon Sharod Samman 2026.</p></div><Link className="button" href="/register">Register Your Pujo →</Link></section>
