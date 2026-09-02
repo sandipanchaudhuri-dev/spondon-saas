@@ -1,2 +1,30 @@
 import Link from "next/link";
-export default function Home(){return <main className="shell"><nav className="nav"><Link className="brand" href="/">Spondon<small>Sharod Somman</small></Link><div className="navlinks"><Link className="button ghost hide-mobile" href="/admin/login">Admin</Link><Link className="button" href="/register">Register your Pujo</Link></div></nav><section className="hero"><div><div className="eyebrow">Registration · Banner Operations · Verification</div><h1>Celebrate the craft behind every Pujo.</h1><p className="lead">A simple, trusted way for Pujo committees to register for Spondon Sharod Somman—and for Spondon to coordinate banner delivery from one operational workspace.</p><div style={{display:"flex",gap:12,marginTop:30,flexWrap:"wrap"}}><Link className="button" href="/register">Start registration →</Link><a className="button secondary" href="#how">How it works</a></div></div><div className="hero-card"><div className="eyebrow">One connected season</div><div className="stat"><span>01 · Pujo registers</span><strong>Online</strong></div><div className="stat"><span>02 · Spondon reviews</span><strong>Clear</strong></div><div className="stat"><span>03 · Banner delivered</span><strong>Tracked</strong></div></div></section><section id="how" className="section"><div className="eyebrow">Designed for the real workflow</div><h2 className="section-title">Small form. Strong operations.</h2><p className="lead">Registration stays easy for committees while the internal team gets the structure needed to manage every handoff.</p><div className="grid3" style={{marginTop:34}}>{[["01","Register","Share committee, contact, theme and artist details."],["02","Review","Spondon accepts registrations and prepares the season."],["03","Distribute","Banner allocation and physical delivery are tracked separately."]].map(([n,t,d])=><article className="card feature" key={n}><div className="num">{n}</div><h3>{t}</h3><p>{d}</p></article>)}</div></section><footer className="footer">Spondon Sharod Somman · Built for seasonal Pujo operations</footer></main>}
+
+const ambassadors = [
+  ["Mou Baidya", "Spondon Brand Ambassador", "/amb-mou.jpg"],
+  ["Anwesha Ghosh", "Spondon Sharod Samman Brand Ambassador", "/amb-anwesha.jpg"],
+  ["Sudipa Sarkar", "AIFFA Brand Ambassador", "/amb-sudipa.jpg"],
+];
+
+const partners = [
+  ["পাঁচফোড়ন", "Powered By", "/panchforon.jpg"],
+  ["Bong Series", "Associate Partner", "/bong-series.jpg"],
+  ["Minu Fashions", "Wardrobe Partner", "/minu.jpg"],
+  ["Panache Production Pvt Ltd", "Associate Partner", "/panache.jpg"],
+  ["Sera Bangla TV", "Media Partner", "/serabangla.jpg"],
+];
+
+export default function Home() {
+  return <main className="site-shell">
+    <header className="public-header">
+      <Link className="brand-lockup" href="/"><img src="/spondon-sharod-somman-2026.png" alt="Spondon"/><span><strong>Spondon</strong><small>Sharod Samman 2026</small></span></Link>
+      <div className="header-actions"><div className="aiffa-member"><span>Affiliated by</span><img src="/aiffa.jpg" alt="AIFFA"/></div><Link className="button header-cta" href="/register">Register Your Pujo</Link></div>
+    </header>
+    <section className="brand-hero"><img src="/spondon-hero.png" alt="Spondon Sharod Samman 2026"/></section>
+    <section className="home-callout"><div><span className="eyebrow">Spondon Sharod Samman 2026</span><h1>Register your Pujo.</h1><p>Registration is now open for Pujo committees participating in Spondon Sharod Samman 2026.</p></div><Link className="button" href="/register">Register Your Pujo →</Link></section>
+    <section className="steps">{[["01","Register","Share committee, contact, theme and artist details."],["02","Review","Spondon reviews and confirms the season registration."],["03","Participate","Banner distribution and on-ground programme activity are tracked separately."]].map(([n,t,d])=><article key={n}><b>{n}</b><h3>{t}</h3><p>{d}</p></article>)}</section>
+    <section className="ambassadors"><span className="eyebrow">Faces of Spondon</span><h2>Brand Ambassadors</h2><div className="ambassador-grid">{ambassadors.map(([name,role,img])=><article key={name}><img src={img} alt={name}/><div><h3>{name}</h3><p>{role}</p></div></article>)}</div></section>
+    <section className="partner-strip"><h2>Partners</h2><div className="partner-grid">{partners.map(([name,role,img])=><article key={name}><span>{role}</span><div><img src={img} alt={name}/></div><strong>{name}</strong></article>)}</div></section>
+    <footer className="public-footer"><span>© 2026 Spondon Sharod Samman</span><a href="https://indianfestival.co.in/" target="_blank" rel="noreferrer">Digital Experience by Indian Festival AI &amp; Innovation Lab</a></footer>
+  </main>;
+}
