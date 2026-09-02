@@ -1,16 +1,16 @@
 import Link from "next/link";
 
 const ambassadors = [
-  ["Mou Baidya", "Spondon Brand Ambassador", "/amb-mou.jpg"],
-  ["Anwesha Ghosh", "Spondon Sharod Samman Brand Ambassador", "/amb-anwesha.jpg"],
-  ["Sudipa Sarkar", "AIFFA Brand Ambassador", "/amb-sudipa.jpg"],
+  ["Mou Baidya", "Spondon Brand Ambassador", "/images/ambassadors/mou-baidya.jpg"],
+  ["Anwesha Ghosh", "Spondon Sharod Samman Brand Ambassador", "/images/ambassadors/anwesha-ghosh.jpg"],
+  ["Sudipa Sarkar", "AIFFA Brand Ambassador", "/images/ambassadors/sudipa-sarkar.jpg"],
 ];
 
 const partners = [
   ["পাঁচফোড়ন", "Powered By", "/panchforon.jpg"],
   ["Minu Fashions", "Wardrobe Partner", "/minu.jpg"],
   ["Panache Production Pvt Ltd", "Associate Partner", "/panache.jpg"],
-  ["Sera Bangla TV", "Media Partner", "/serabangla.jpg"],
+  ["Bong Series", "Media Partner", "/images/bong-series.jpg"],
 ];
 
 export default function Home() {
