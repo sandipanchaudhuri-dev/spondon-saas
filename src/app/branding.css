@@ -1,39 +1,5 @@
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 11px;
-  line-height: 1;
-}
-
-.brand::before {
-  content: "";
-  width: 54px;
-  height: 54px;
-  flex: 0 0 54px;
-  border-radius: 50%;
-  background: url("https://raw.githubusercontent.com/sandipanchaudhuri-dev/spondon-saas/main/public/spondon-sharod-somman-2026.png") center / contain no-repeat;
-  filter: drop-shadow(0 3px 7px rgba(83, 29, 43, .16));
-}
-
-.sidebar .brand::before {
-  width: 58px;
-  height: 58px;
-  flex-basis: 58px;
-}
-
-@media (max-width: 800px) {
-  .admin .sidebar {
-    display: flex;
-    align-items: center;
-    min-height: 76px;
-    padding: 9px 18px;
-  }
-  .admin .side-links { display: none; }
-  .admin .sidebar .brand::before { width: 54px; height: 54px; flex-basis: 54px; }
-}
-
-@media (max-width: 520px) {
-  .brand { font-size: 22px; gap: 8px; }
-  .brand::before { width: 46px; height: 46px; flex-basis: 46px; }
-  .brand small { font-size: 7px; letter-spacing: 1.2px; }
-}
+.brand{display:inline-flex;align-items:center;gap:11px;line-height:1}.brand::before{content:"";width:54px;height:54px;flex:0 0 54px;border-radius:50%;background:url("/spondon-sharod-somman-2026.png") center/contain no-repeat;filter:drop-shadow(0 3px 7px rgba(83,29,43,.16))}.sidebar .brand::before{width:58px;height:58px;flex-basis:58px}
+body,.site-shell{color:#3a2418;background:#fff}.public-header{background:linear-gradient(135deg,#561411,#6d1c17 52%,#8b351f);border-bottom:3px solid #d79a29;justify-content:space-between;align-items:center;max-width:none;padding:13px max(18px,calc(50vw - 576px));display:flex}.brand-lockup{color:#fff;align-items:center;gap:12px;text-decoration:none;display:flex}.brand-lockup>img{background:#fff;border:2px solid #e8b84f;border-radius:50%;width:76px;height:76px}.brand-lockup span{display:grid}.brand-lockup strong{color:#fff;font:700 30px Georgia}.brand-lockup small{letter-spacing:2px;color:#f1ca6b;text-transform:uppercase;font:800 9px Arial}.header-actions,.aiffa-member{align-items:center;gap:10px;display:flex}.aiffa-member{color:#f7d77f;text-transform:uppercase;font:800 9px Arial}.aiffa-member img{border:2px solid #f0c55e;border-radius:50%;width:44px;height:44px}.header-cta{color:#3a2418!important;background:#efbd48!important}.brand-hero{max-width:1200px;margin:18px auto 0;padding:0 20px}.brand-hero img{aspect-ratio:16/9;object-fit:cover;border-radius:24px;width:100%}.home-callout{justify-content:space-between;align-items:end;gap:25px;max-width:1120px;margin:48px auto 26px;padding:0 24px;display:flex}.home-callout h1{margin:10px 0;font-size:clamp(42px,6vw,72px)}.home-callout p{color:#79685f;font-size:18px}.eyebrow{letter-spacing:1.7px;text-transform:uppercase;background:#fff6dc;border:1px solid #f1dfa9;border-radius:99px;padding:7px 11px;font-size:11px;font-weight:800;display:inline-block}.steps{grid-template-columns:repeat(3,1fr);gap:18px;max-width:1120px;margin:0 auto 70px;padding:0 24px;display:grid}.steps article,.ambassador-grid article,.partner-grid article{background:#fff;border:1px solid #e9e1d9;border-radius:20px;box-shadow:0 10px 28px rgba(58,36,24,.055)}.steps article{padding:26px}.steps h3{font-size:27px}.steps p{color:#79685f}.ambassadors{text-align:center;max-width:1120px;margin:0 auto 76px;padding:0 24px}.ambassadors h2,.partner-strip h2{margin:14px 0 28px;font:700 clamp(36px,5vw,54px) Georgia}.ambassador-grid{grid-template-columns:repeat(3,1fr);gap:20px;display:grid}.ambassador-grid article{text-align:left;overflow:hidden}.ambassador-grid img{aspect-ratio:4/5;object-fit:cover;width:100%;display:block}.ambassador-grid article div{padding:18px}.ambassador-grid h3{margin:0 0 6px;font:700 24px Georgia}.ambassador-grid p{color:#8a6c5d;margin:0;font-size:13px}.partner-strip{text-align:center;background:#fff6dc;padding:44px 24px}.partner-grid{grid-template-columns:repeat(4,1fr);gap:15px;max-width:1040px;margin:auto;display:grid}.partner-grid article{padding:16px}.partner-grid article>span{letter-spacing:1.4px;text-transform:uppercase;color:#9b7426;font-size:10px;font-weight:800}.partner-grid article>div{place-items:center;height:110px;display:grid}.partner-grid img{max-width:100%;max-height:100px}.partner-grid strong{color:#6e574b;font-size:12px}.public-footer{color:#f7efe8;background:#3a2418;justify-content:space-between;gap:15px;padding:20px 24px;font-size:12px;display:flex}.public-footer a{color:#e9c76f;font-size:11px;text-decoration:none}.form-wrap{max-width:840px;margin:auto;padding:44px 24px}.phone-control{grid-template-columns:88px minmax(0,1fr)!important}.country-code{padding-left:6px!important;padding-right:18px!important}.login:before{content:"";z-index:-1;background:linear-gradient(rgba(34,22,15,.54),rgba(34,22,15,.72)),url(/spondon-hero.png) 50%/cover no-repeat;position:fixed;inset:0}.login{background:transparent!important}
+@media(max-width:800px){.admin .sidebar{display:flex;align-items:center;min-height:76px;padding:9px 18px}.admin .side-links{display:none}.admin .sidebar .brand::before{width:54px;height:54px;flex-basis:54px}}
+@media(max-width:760px){.brand-lockup>img{width:54px;height:54px}.brand-lockup strong{font-size:23px}.brand-lockup small{font-size:6.5px}.aiffa-member span{display:none}.aiffa-member img{width:34px;height:34px}.header-cta{text-align:center;max-width:118px;font-size:12px;padding:11px 12px!important}.brand-hero{padding:0 14px}.home-callout{flex-direction:column;align-items:flex-start}.steps,.ambassador-grid{grid-template-columns:1fr}.ambassador-grid{max-width:430px;margin:auto}.partner-grid{grid-template-columns:repeat(2,1fr)}.public-footer{text-align:center;flex-direction:column}.public-footer a{font-size:10px}}
+@media(max-width:520px){.brand{font-size:22px;gap:8px}.brand::before{width:46px;height:46px;flex-basis:46px}.brand small{font-size:7px;letter-spacing:1.2px}}
