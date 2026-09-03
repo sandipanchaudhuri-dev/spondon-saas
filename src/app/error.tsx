@@ -1,1 +1,0 @@
-"use client";export default function ErrorPage({reset}:{reset:()=>void}){return <main className="login"><section className="card" style={{padding:34,textAlign:"center"}}><h1>Something went wrong</h1><p className="muted">The request could not be completed.</p><button className="button" onClick={reset}>Try again</button></section></main>}

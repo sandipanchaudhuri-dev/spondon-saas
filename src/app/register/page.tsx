@@ -1,2 +1,0 @@
-import Link from "next/link";import {RegistrationForm} from "./registration-form";
-export default function RegisterPage(){return <main className="shell"><nav className="nav"><Link className="brand" href="/">Spondon<small>Sharod Somman</small></Link><Link className="button secondary" href="/">Back home</Link></nav><div className="form-wrap"><header className="form-head"><div className="eyebrow">Sharod Somman 2026</div><h1>Pujo registration</h1><p className="lead">Tell us about your Pujo committee. It takes about four minutes.</p></header><RegistrationForm/></div></main>}
