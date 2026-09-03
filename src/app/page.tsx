@@ -7,10 +7,11 @@ const ambassadors = [
 ];
 
 const partners = [
+  ["Bong Series", "Associate Partner", "/images/bong-series.jpg"],
   ["পাঁচফোড়ন", "Powered By", "/panchforon.jpg"],
   ["Minu Fashions", "Wardrobe Partner", "/minu.jpg"],
   ["Panache Production Pvt Ltd", "Associate Partner", "/panache.jpg"],
-  ["Bong Series", "Media Partner", "/images/bong-series.jpg"],
+  ["Saradin Bangla", "Media Partner", "/images/saradin-bangla.png"],
 ];
 
 export default function Home() {
