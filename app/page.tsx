@@ -50,8 +50,7 @@ export default function Home() {
             <PartnerCard label="Powered By" name="পাঁচফোড়ন" image="/panchforon.jpg" />
             <PartnerCard label="Wardrobe Partner" name="Minu Fashions" image="/minu-fashions.jpg" />
             <PartnerCard label="Associate Partner" name="Panache Production Pvt Ltd" image="/panache.jpg" />
-            <PartnerCard label="Media Partner" name="Bong Series" image="/images/bong-series.jpg" />
-            <PartnerCard label="Media Partner" name="Saradin Bangla" image="/saradin-bangla.png" />
+            <PartnerCard label="Media Partner" name="Saradin Bangla" image="/saradin-bangla.jpg" />
           </div>
         </div>
       </section>
