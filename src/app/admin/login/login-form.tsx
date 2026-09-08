@@ -4,6 +4,7 @@ import {useState} from "react";
 import {createClient} from "@/lib/supabase/client";
 
 const ADMIN_EMAILS=["spondon2020official@gmail.com","sandipan.chaudhuri@gmail.com"] as const;
+const SITE_URL=(process.env.NEXT_PUBLIC_SITE_URL||"https://spondon.pujoonline.com").replace(/\/$/,"");
 
 export function LoginForm(){
   const [email,setEmail]=useState<string>(ADMIN_EMAILS[0]);
@@ -17,7 +18,7 @@ export function LoginForm(){
       const normalised=email.trim().toLowerCase();
       if(!ADMIN_EMAILS.includes(normalised as typeof ADMIN_EMAILS[number]))throw new Error("This email is not authorised for Spondon admin access.");
       const supabase=createClient();
-      const redirectTo=`${window.location.origin}/auth/callback?next=/admin`;
+      const redirectTo=`${SITE_URL}/auth/callback?next=/admin`;
       const {error}=await supabase.auth.signInWithOtp({email:normalised,options:{emailRedirectTo:redirectTo,shouldCreateUser:true}});
       if(error)throw error;
       setSent(true);
