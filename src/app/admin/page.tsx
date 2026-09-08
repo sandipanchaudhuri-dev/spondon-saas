@@ -1,6 +1,6 @@
 import {redirect} from "next/navigation";
 import {createClient} from "@/lib/supabase/server";
-import {AdminDashboard} from "./admin-dashboard";
+import {RegistrationAdmin} from "./registration-admin";
 
 const ADMIN_EMAIL="spondon2020official@gmail.com";
 
@@ -11,13 +11,7 @@ export default async function AdminPage(){
   if(!user)redirect("/admin/login");
   if((user.email||"").toLowerCase()!==ADMIN_EMAIL)redirect("/admin/login?unauthorized=1");
 
-  const db=supabase.schema("spondon");
-  const [registrations,banners,allocations,distributions]=await Promise.all([
-    db.from("pujo_registrations").select("*").order("created_at",{ascending:false}),
-    db.from("banners").select("*").order("created_at",{ascending:false}),
-    db.from("banner_allocations").select("*").order("created_at",{ascending:false}),
-    db.from("banner_distributions").select("*").order("created_at",{ascending:false})
-  ]);
-  if(registrations.error)return <main className="login"><div className="alert error">This account is not authorised to read Spondon registrations.</div></main>;
-  return <AdminDashboard initial={registrations.data||[]} initialBanners={banners.data||[]} initialAllocations={allocations.data||[]} distributions={distributions.data||[]} email={user.email||"Admin"}/>;
+  const {data,error}=await supabase.schema("spondon").from("pujo_registrations").select("*").order("created_at",{ascending:false});
+  if(error)return <main className="login"><div className="alert error">This account is not authorised to read Spondon registrations.</div></main>;
+  return <RegistrationAdmin initial={data||[]} email={user.email||ADMIN_EMAIL}/>;
 }
