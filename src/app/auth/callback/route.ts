@@ -1,7 +1,7 @@
 import {NextResponse} from "next/server";
 import {createClient} from "@/lib/supabase/server";
 
-const ADMIN_EMAIL="spondon2020official@gmail.com";
+const ADMIN_EMAILS=["spondon2020official@gmail.com","sandipan.chaudhuri@gmail.com"];
 
 export async function GET(request:Request){
   const url=new URL(request.url);
@@ -14,7 +14,8 @@ export async function GET(request:Request){
   if(error)return NextResponse.redirect(new URL("/admin/login?error=auth_failed",url.origin));
 
   const {data:{user}}=await supabase.auth.getUser();
-  if((user?.email||"").toLowerCase()!==ADMIN_EMAIL){
+  const email=(user?.email||"").toLowerCase();
+  if(!ADMIN_EMAILS.includes(email)){
     await supabase.auth.signOut();
     return NextResponse.redirect(new URL("/admin/login?unauthorized=1",url.origin));
   }
