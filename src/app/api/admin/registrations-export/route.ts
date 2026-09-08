@@ -1,16 +1,12 @@
 import {NextResponse} from "next/server";
 import {createClient} from "@/lib/supabase/server";
 
-const ADMIN_EMAILS=["spondon2020official@gmail.com","sandipan.chaudhuri@gmail.com"];
 const fields=["id","public_reference","organisation_id","event_id","applicant_name","email","phone","whatsapp_number","pujo_name","address","notes","status","submitted_by_user_id","reviewed_by_user_id","reviewed_at","created_at","updated_at","theme","artist_name"] as const;
 
 function xmlEscape(value:unknown){return String(value??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\"/g,"&quot;").replace(/'/g,"&apos;");}
 
 export async function GET(){
   const supabase=await createClient();
-  const {data:{user}}=await supabase.auth.getUser();
-  const email=(user?.email||"").toLowerCase();
-  if(!user||!ADMIN_EMAILS.includes(email))return NextResponse.json({error:"Unauthorised"},{status:401});
   const {data,error}=await supabase.schema("spondon").from("pujo_registrations").select("*").order("created_at",{ascending:false});
   if(error)return NextResponse.json({error:"Could not export registrations"},{status:500});
   const header=fields.map((field)=>`<Cell><Data ss:Type="String">${xmlEscape(field)}</Data></Cell>`).join("");
