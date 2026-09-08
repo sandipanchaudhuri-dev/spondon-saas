@@ -16,5 +16,5 @@ export async function GET(){
   const rows=(data||[]).map((row:any)=>`<Row>${fields.map((field)=>`<Cell><Data ss:Type="String">${xmlEscape(row[field])}</Data></Cell>`).join("")}</Row>`).join("");
   const workbook=`<?xml version="1.0"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"><Worksheet ss:Name="Registrations"><Table><Row>${header}</Row>${rows}</Table></Worksheet></Workbook>`;
   const stamp=new Date().toISOString().slice(0,10);
-  return new NextResponse(workbook,{status:200,headers:{"Content-Type":"application/vnd.ms-excel; charset=utf-8","Content-Disposition":`attachment; filename="spondon-pujo-registrations-${stamp}.xls"`,`Cache-Control":"no-store"}});
+  return new NextResponse(workbook,{status:200,headers:{"Content-Type":"application/vnd.ms-excel; charset=utf-8","Content-Disposition":`attachment; filename="spondon-pujo-registrations-${stamp}.xls"`,"Cache-Control":"no-store"}});
 }
