@@ -1,2 +1,2 @@
 import Link from "next/link";import {LoginForm} from "./login-form";
-export default function Login(){return <main className="shell login"><section className="card"><Link className="brand" href="/">Spondon<small>Operations</small></Link><h1 style={{marginTop:32}}>Welcome back</h1><p className="muted">Sign in to manage registrations and banner operations.</p><LoginForm/></section></main>}
+export default function Login(){return <main className="shell login"><section className="card"><Link className="brand" href="/">Spondon<small>Administration</small></Link><h1 style={{marginTop:32}}>Registration Admin</h1><p className="muted">Secure access to Spondon Sharod Somman 2026 registrations and offline Excel export.</p><LoginForm/></section></main>}
