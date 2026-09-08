@@ -1,2 +1,5 @@
-import Link from "next/link";import {LoginForm} from "./login-form";
-export default function Login(){return <main className="shell login"><section className="card"><Link className="brand" href="/">Spondon<small>Administration</small></Link><h1 style={{marginTop:32}}>Registration Admin</h1><p className="muted">Secure access to Spondon Sharod Somman 2026 registrations and offline Excel export.</p><LoginForm/></section></main>}
+import {redirect} from "next/navigation";
+
+export default function Login(){
+  redirect("/admin");
+}
