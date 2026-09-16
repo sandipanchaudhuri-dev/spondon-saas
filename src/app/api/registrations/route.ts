@@ -27,7 +27,7 @@ async function sendRegistrationMail(payload:z.infer<typeof input>,reference:stri
     const result=await response.json().catch(()=>({success:false,error:"Invalid Apps Script response"}));
     if(!result?.success)throw new Error(String(result?.error||"Apps Script mail delivery failed"));
     return true;
-  }catch(error){console.error("Spondon registration mail failed",error instanceof Error?error.message:"unknown");return false;}
+  }catch(error){console.error("Spondon registration mail failed",error instanceof Error?error.message:String(error));return false;}
 }
 
 export async function POST(request:Request){
@@ -36,13 +36,14 @@ export async function POST(request:Request){
     if(!parsed.success)return NextResponse.json({error:"Please check the submitted details."},{status:400});
     const url=process.env.NEXT_PUBLIC_SUPABASE_URL,key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,eventId=process.env.NEXT_PUBLIC_SPONDON_EVENT_ID,organisationId=process.env.NEXT_PUBLIC_SPONDON_ORGANISATION_ID;
     if(!url||!key||!eventId||!organisationId)return NextResponse.json({error:"Registration is not configured yet."},{status:503});
-    const db=createClient(url,key,{auth:{persistSession:false}}).schema("spondon");
+    const db=createClient(url,key,{auth:{persistSession:false}});
     const {terms,...payload}=parsed.data;void terms;
-    const {data,error}=await db.rpc("submit_pujo_registration",{p_organisation_id:organisationId,p_event_id:eventId,p_pujo_name:payload.pujo_name,p_address:payload.address,p_primary_contact_number:payload.primary_contact_number,p_theme:payload.theme,p_artist_name:payload.artist_name,p_contact_person_name:payload.contact_person_name,p_email:payload.email,p_whatsapp_number:payload.whatsapp_number});
-    if(error)throw error;
+    const {data,error}=await db.rpc("submit_spondon_pujo_registration",{p_organisation_id:organisationId,p_event_id:eventId,p_pujo_name:payload.pujo_name,p_address:payload.address,p_primary_contact_number:payload.primary_contact_number,p_theme:payload.theme,p_artist_name:payload.artist_name,p_contact_person_name:payload.contact_person_name,p_email:payload.email,p_whatsapp_number:payload.whatsapp_number});
+    if(error){console.error("Spondon registration RPC failed",{code:error.code,message:error.message,details:error.details,hint:error.hint});throw new Error(error.message);}
     const result=Array.isArray(data)?data[0]:data;
     const reference=String(result?.public_reference||"");
+    if(!reference)throw new Error("Registration was saved without a reference number.");
     const emailSent=await sendRegistrationMail(parsed.data,reference);
     return NextResponse.json({reference_id:reference,email_sent:emailSent},{status:201});
-  }catch(e){console.error("registration submission failed",e instanceof Error?e.message:"unknown");return NextResponse.json({error:"We could not submit your registration. Please try again."},{status:500})}
+  }catch(e){console.error("registration submission failed",e instanceof Error?e.message:String(e));return NextResponse.json({error:"We could not submit your registration. Please try again."},{status:500})}
 }
