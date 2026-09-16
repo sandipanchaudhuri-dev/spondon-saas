@@ -79,9 +79,9 @@ export function RegistrationForm(){
       <div className="field"><label>Contact person *</label><input className={`input${invalid("contact_person_name")?" invalid":""}`} name="contact_person_name" autoComplete="name" aria-invalid={invalid("contact_person_name")}/>{fieldError("contact_person_name")}</div>
       <div className="field"><label>Primary contact number *</label><input className={`input${invalid("primary_contact_number")?" invalid":""}`} name="primary_contact_number" inputMode="tel" aria-invalid={invalid("primary_contact_number")}/>{fieldError("primary_contact_number")}</div>
       <div className="field"><label>Email *</label><input className={`input${invalid("email")?" invalid":""}`} name="email" type="email" autoComplete="email" aria-invalid={invalid("email")}/>{fieldError("email")}</div>
-      <div className="field"><label>WhatsApp number <span className="optional">(optional)</span></label><input className={`input${invalid("whatsapp_number")?" invalid":""}`} name="whatsapp_number" inputMode="tel" aria-invalid={invalid("whatsapp_number")}/>{fieldError("whatsapp_number")}</div>
-      <div className="field"><label>Theme <span className="optional">(optional)</span></label><input className="input" name="theme"/></div>
-      <div className="field"><label>Artist name <span className="optional">(optional)</span></label><input className="input" name="artist_name"/></div>
+      <div className="field"><label>WhatsApp number</label><input className={`input${invalid("whatsapp_number")?" invalid":""}`} name="whatsapp_number" inputMode="tel" aria-invalid={invalid("whatsapp_number")}/>{fieldError("whatsapp_number")}</div>
+      <div className="field"><label>Theme</label><input className="input" name="theme"/></div>
+      <div className="field"><label>Artist name</label><input className="input" name="artist_name"/></div>
       <div className={`field full terms${invalid("terms")?" invalid-box":""}`}><label style={{display:"flex",gap:10,alignItems:"flex-start"}}><input name="terms" type="checkbox" style={{marginTop:3}}/><span>I confirm the information is correct and accept the programme rules. Selection decisions are final, and participating committees must follow applicable government and safety protocols.</span></label>{fieldError("terms")}</div>
     </div>
     {error&&<div className="alert error">{error}</div>}
