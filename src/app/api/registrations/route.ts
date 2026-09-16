@@ -2,7 +2,7 @@ import {NextResponse} from "next/server";
 import {createClient} from "@supabase/supabase-js";
 import {z} from "zod";
 
-const input=z.object({pujo_name:z.string().trim().min(2).max(180),address:z.string().trim().min(8).max(1000),primary_contact_number:z.string().trim().min(8).max(30),theme:z.string().trim().max(240).optional().default(""),artist_name:z.string().trim().max(180).optional().default(""),contact_person_name:z.string().trim().min(2).max(180),email:z.string().email().max(254),whatsapp_number:z.string().trim().min(8).max(30),terms:z.literal(true)});
+const input=z.object({pujo_name:z.string().trim().min(2).max(180),address:z.string().trim().min(8).max(1000),primary_contact_number:z.string().trim().min(8).max(30),theme:z.string().trim().max(240).optional().default(""),artist_name:z.string().trim().max(180).optional().default(""),contact_person_name:z.string().trim().min(2).max(180),email:z.string().trim().email().max(254),whatsapp_number:z.string().trim().max(30).optional().default(""),terms:z.literal(true)});
 
 async function sendRegistrationMail(payload:z.infer<typeof input>,reference:string){
   const endpoint=process.env.SPONDON_APPS_SCRIPT_URL;
