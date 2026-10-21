@@ -7,3 +7,9 @@
 .ipgc-landing-action:hover{background:#e4c67b;transform:translateY(-2px)}
 .ipgc-landing-action:focus-visible{outline:3px solid white;outline-offset:4px}
 @media(max-width:600px){.ipgc-landing{justify-content:flex-start;padding:20px 12px;gap:25px}.ipgc-landing-action{width:min(100%,340px);text-align:center}}
+
+.ipgc-home-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.ipgc-home-admin{color:#f1d9ac;border:1px solid #b99551;border-radius:100px;padding:15px 28px;font-weight:650;text-decoration:none;background:#220d16}
+.ipgc-home-admin:hover{background:#3b1924}
+.ipgc-home-admin:focus-visible{outline:3px solid white;outline-offset:4px}
+@media(max-width:600px){.ipgc-home-links{width:100%;flex-direction:column}.ipgc-home-links a{width:min(100%,340px);text-align:center}}
