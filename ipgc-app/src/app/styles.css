@@ -13,3 +13,10 @@
 .ipgc-home-admin:hover{background:#3b1924}
 .ipgc-home-admin:focus-visible{outline:3px solid white;outline-offset:4px}
 @media(max-width:600px){.ipgc-home-links{width:100%;flex-direction:column}.ipgc-home-links a{width:min(100%,340px);text-align:center}}
+
+/* Shared site credit on home, registration and private admin pages */
+.ipgc-site{min-height:100svh;display:flex;flex-direction:column}
+.ipgc-site-content{flex:1;min-height:0}
+.ipgc-global-footer{margin:0;background:#220d16;color:#f1d9ac;text-align:center;padding:18px 16px;font-size:13px;line-height:1.55}
+.ipgc-global-footer a{color:inherit;text-decoration:none;text-underline-offset:3px}
+.ipgc-global-footer a:hover,.ipgc-global-footer a:focus-visible{text-decoration:underline}
