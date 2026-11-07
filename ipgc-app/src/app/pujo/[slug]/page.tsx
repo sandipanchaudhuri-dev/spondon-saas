@@ -15,9 +15,9 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
   <nav className="ipgc-profile-nav"><Link href="/">← Back to Top 15</Link><span>IPGC · SHYAMA SAMMAN 2026</span></nav>
   <article className="ipgc-profile">
    <div className="ipgc-profile-head"><p className="ipgc-profile-eyebrow">OFFICIAL TOP 15 FINALIST</p><h1>{f.name}</h1><p className="ipgc-profile-area">{f.area}</p></div>
-   <div className="ipgc-profile-details">
+   <dl className="ipgc-profile-details">
     {info.map(([label,value])=><div className="ipgc-profile-detail" key={label}><dt>{label}</dt><dd>{value||"Information not provided"}</dd></div>)}
-   </div>
+   </dl>
    <section className="ipgc-profile-location" aria-label="Location">
     <div><h2>Find this Pujo</h2><p>{f.address}</p></div>
     <a className="ipgc-location-link" href={mapHref(f)} target="_blank" rel="noopener noreferrer" aria-label={f.maps?`Open registered map location for ${f.name}`:`Search registered address for ${f.name} on Google Maps`}>
