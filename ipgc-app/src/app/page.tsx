@@ -13,8 +13,8 @@ export default function Home(){
    <div className="ipgc-finalists-heading"><span>IPGC SHYAMA SAMMAN 2026</span><h2>Meet the Top 15</h2><p>Explore each finalist's registered information, location and field photography updates.</p></div>
    <div className="ipgc-finalists-grid">
     {finalists.map((f,i)=><Link className="ipgc-finalist-tile" href={`/pujo/${f.slug}`} key={f.slug}>
-     <span className="ipgc-finalist-no">{String(i+1).padStart(2,"0")}</span>
-     <div><h3>{f.name}</h3><p>{f.area}</p></div>
+     <span className="ipgc-finalist-visual">{f.publishedPhotos.length?<img src={(f.publishedPhotos.find(p=>p.alt.toLowerCase().includes("field visit"))||f.publishedPhotos[0]).src} alt="" loading="lazy"/>:<span className="placeholder">{String(i+1).padStart(2,"0")}</span>}</span>
+     <span className="ipgc-finalist-content"><small>TOP 15 FINALIST · {String(i+1).padStart(2,"0")}</small><h3>{f.name}</h3><p>{f.area}</p></span>
      <span aria-hidden="true" className="ipgc-finalist-arrow">↗</span>
     </Link>)}
    </div>
