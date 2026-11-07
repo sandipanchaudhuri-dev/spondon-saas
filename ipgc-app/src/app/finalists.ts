@@ -1,9 +1,9 @@
 /** IPGC Shyama Samman 2026 Top 15.
  * Names and publication set: final 7 Nov announcement (Jubak Brinda replaces Rajarhat Netaji Sangha).
  * Attributes: ipgc.registrations, production snapshot 8 Nov 2026.
- * Photo counts: sera_field_visits + sera_field_media, 8 Nov. All recorded photo review_status=pending.
- * No phone numbers, emails, personal data, or private storage paths are published.
- * Update only from registered source and review-cleared media.
+ * Photo sources: 2026 IPGC-run sera_field_visits and sera_field_media, joined by canonical registration ID.
+ * No contact data, email addresses or private storage paths are published.
+ * Owner-authorised public album release, 8 Nov 2026. Private evidence bucket remains private.
  */
 export type Finalist = {
   slug: string; name: string; registration: string; area: string; address: string;
