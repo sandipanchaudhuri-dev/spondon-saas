@@ -29,3 +29,11 @@ body>.ipgc-countdown{max-width:none}
 
 /* The approved Top 15 artwork is the homepage hero. Original logos and image artwork are not redrawn. */
 .ipgc-landing-hero{width:min(100%,1040px);height:auto;object-fit:contain;border-radius:4px}
+
+/* Top 15 phase announcement directly below the approved homepage artwork. */
+.ipgc-landing{justify-content:flex-start;gap:clamp(12px,2vw,20px);padding-top:clamp(12px,2vw,22px)}
+.ipgc-top15-announcement{width:min(100%,1040px);color:#f8eadb;text-align:center;padding:4px clamp(12px,3vw,30px) 28px;line-height:1.65}
+.ipgc-top15-announcement h1{color:#f4dfa9;font:700 clamp(24px,4vw,38px)/1.25 Georgia,serif;margin:0 0 14px}
+.ipgc-top15-announcement p{font-size:clamp(15px,2vw,19px);margin:0 auto 16px;max-width:800px}
+.ipgc-top15-announcement strong{color:#f4dfa9}
+@media(max-width:600px){.ipgc-landing{padding:12px 10px 20px;gap:14px}.ipgc-top15-announcement{padding:4px 10px 20px;text-align:left}.ipgc-top15-announcement h1{text-align:center}.ipgc-top15-announcement p{line-height:1.55}}
