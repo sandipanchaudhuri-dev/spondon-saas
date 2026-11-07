@@ -60,7 +60,7 @@ body>.ipgc-countdown{max-width:none}
 .ipgc-profile-head{padding:clamp(28px,5vw,60px);background:radial-gradient(ellipse at 85% 15%,#6b3841,#330f20 62%,#220c17)}
 .ipgc-profile-head h1{font:700 clamp(37px,6vw,64px)/1.13 Georgia,serif;color:#f7dd9c;max-width:800px;margin:14px 0}
 .ipgc-profile-area{color:#e5c6bc;font-size:17px;margin:0}
-.ipgc-profile-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:clamp(20px,4vw,40px);gap:23px}
+.ipgc-profile-details{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:clamp(20px,4vw,40px);gap:23px}
 .ipgc-profile-detail{border-bottom:1px solid #6b4950;padding-bottom:15px;min-width:0}
 .ipgc-profile-detail dt{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#c8ab8c;margin-bottom:10px}
 .ipgc-profile-detail dd{margin:0;font:500 clamp(17px,2.2vw,21px)/1.4 Georgia,serif;overflow-wrap:anywhere}
