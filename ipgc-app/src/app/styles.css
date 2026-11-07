@@ -27,8 +27,5 @@
 .ipgc-countdown span{font-variant-numeric:tabular-nums;font-size:clamp(14px,2vw,20px);letter-spacing:.025em}
 body>.ipgc-countdown{max-width:none}
 
-/* Published, unaltered IPGC Top 15 announcement below the existing locked hero */
-.ipgc-top15-section{width:min(100%,1080px);display:flex;flex-direction:column;align-items:center;gap:14px;margin:4px auto 16px}
-.ipgc-top15-section h2{font-family:Georgia,serif;color:#f4dfa9;text-align:center;font-weight:500;letter-spacing:.035em;font-size:clamp(20px,3vw,30px);margin:0}
-.ipgc-top15-poster{width:min(100%,900px);height:auto;display:block;object-fit:contain;border:1px solid #b99551;border-radius:8px;box-shadow:0 16px 40px #0007}
-@media(max-width:600px){.ipgc-top15-section{gap:10px;margin:0 auto 12px}.ipgc-top15-poster{border-radius:4px}}
+/* The approved Top 15 artwork is the homepage hero. Original logos and image artwork are not redrawn. */
+.ipgc-landing-hero{width:min(100%,1040px);height:auto;object-fit:contain;border-radius:4px}
