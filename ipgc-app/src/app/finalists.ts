@@ -37,7 +37,7 @@ export const finalistAwards: Readonly<Record<string,string>> = {
   "tribhuvan-club": "শহরের সেরা ৫",
   "barisha-santi-sangha": "শহরের সেরা ৫",
   "sree-colony-mainak": "শহরের সেরা ৫",
-  "amra-kajan": "শহরের সেরা ৫",
+  "tollygunge-avijatri": "শহরের সেরা ৫",
   "bijoygarh-6-pally": "সেরা আলোক সজ্জা",
   "narayantala-yubak-sangha": "সেরা প্রতিমা",
   "sukantanagar-sporting": "সেরা মণ্ডপ সজ্জা",
