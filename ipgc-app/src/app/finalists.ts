@@ -43,6 +43,6 @@ export const finalistAwards: Readonly<Record<string,string>> = {
   "sukantanagar-sporting": "সেরা মণ্ডপ সজ্জা",
   "bapujinagar-krirangan": "Indian Festival Discovery",
   "amra-milan-tirtha": "IPGC Discovery",
-  "jubak-brinda": "Special Jury Award",
+  "jubak-brinda": "IPGC Discovery",
   "labony-sporting-club": "IPGC President's Honour",
 };
