@@ -30,3 +30,19 @@ export const finalists: readonly Finalist[] = [
 ];
 export const mapHref = (f:Finalist) => f.maps && /^https:\/\/(maps\.app\.goo\.gl|www\.google\.com\/maps|share\.google)\//.test(f.maps)
  ? f.maps : "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(f.address);
+
+/** Approved 2026 award labels, keyed to the canonical Top 15 profile slugs. */
+export const finalistAwards: Readonly<Record<string,string>> = {
+  "haowa-shokal": "শহরের সেরা ৫",
+  "tribhuvan-club": "শহরের সেরা ৫",
+  "barisha-santi-sangha": "শহরের সেরা ৫",
+  "sree-colony-mainak": "শহরের সেরা ৫",
+  "amra-kajan": "শহরের সেরা ৫",
+  "bijoygarh-6-pally": "সেরা আলোক সজ্জা",
+  "narayantala-yubak-sangha": "সেরা প্রতিমা",
+  "sukantanagar-sporting": "সেরা মণ্ডপ সজ্জা",
+  "bapujinagar-krirangan": "Indian Festival Discovery",
+  "amra-milan-tirtha": "IPGC Discovery",
+  "jubak-brinda": "IPGC Discovery",
+  "labony-sporting-club": "IPGC President's Honour",
+};
