@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {notFound} from "next/navigation";
 import type {Metadata} from "next";
-import {finalists,mapHref} from "../../finalists";
+import {finalists,finalistAwards,mapHref} from "../../finalists";
 import FinalistAlbum from "./finalist-album";
 export const dynamicParams=false;
 export function generateStaticParams(){return finalists.map(f=>({slug:f.slug}));}
@@ -21,6 +21,7 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
      <p className="ipgc-profile-eyebrow">IPGC SHYAMA SAMMAN 2026 <span aria-hidden="true">·</span> TOP 15</p>
      <h1>{f.name}</h1>
      <p className="ipgc-profile-area"><span aria-hidden="true">⌖ </span>{f.area}</p>
+     {finalistAwards[f.slug]&&<div className="ipgc-profile-award"><span className="ipgc-award-icon" aria-hidden="true">🏆</span><strong>{finalistAwards[f.slug]}</strong></div>}
      <div className="ipgc-profile-intro"><span>{f.established?"EST. "+f.established:"2026 FINALIST"}</span><span>{f.publishedPhotos.length} {f.publishedPhotos.length===1?"PHOTOGRAPH":"PHOTOGRAPHS"}</span></div>
     </div>
     {image?<a className="ipgc-profile-feature" href="#photo-album" aria-label="Browse field photographs"><img src={image.src} alt={image.alt}/><span>EXPLORE THE PHOTO ALBUM <b>↘</b></span></a>:
