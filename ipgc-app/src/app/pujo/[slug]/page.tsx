@@ -4,6 +4,7 @@ import type {Metadata} from "next";
 import {finalists,finalistAwards,mapHref} from "../../finalists";
 import FinalistAlbum from "./finalist-album";
 import {loadPublishedAlbums} from "../../ipgc-gallery";
+import PhotoStage from "../../photo-stage";
 export const dynamicParams=false;
 export const dynamic="force-dynamic";
 export function generateStaticParams(){return finalists.map(f=>({slug:f.slug}));}
@@ -28,7 +29,7 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
      {finalistAwards[f.slug]&&<div className="ipgc-profile-award"><span className="ipgc-award-icon" aria-hidden="true">🏆</span><strong>{finalistAwards[f.slug]}</strong></div>}
      <div className="ipgc-profile-intro"><span>{f.established?"EST. "+f.established:"2026 FINALIST"}</span><span>{photos.length} {photos.length===1?"PHOTOGRAPH":"PHOTOGRAPHS"}</span></div>
     </div>
-    {image?<a className="ipgc-profile-feature" href="#photo-album" aria-label="Browse field photographs"><img src={image.src} alt={image.alt}/><span>EXPLORE THE PHOTO ALBUM <b>↘</b></span></a>:
+    {image?<a className="ipgc-profile-feature" href="#photo-album" aria-label="Browse field photographs"><PhotoStage photo={image} variant="hero"/><span className="ipgc-feature-linklabel">EXPLORE THE PHOTO ALBUM <b>↘</b></span></a>:
      <div className="ipgc-profile-feature ipgc-profile-feature-empty"><span>Photographs to follow</span></div>}
    </header>
    <section className="ipgc-profile-main" aria-label="2026 Pujo information">
@@ -48,7 +49,7 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
     </a></div>
    </section>
    <section id="photo-album" className="ipgc-profile-album" aria-label="Photo album">
-    <div className="ipgc-profile-section-heading"><span>03 / THROUGH THE LENS</span><h2>{fromCommittee?"Pujo photographs":"Field photography"}</h2><p>{fromCommittee?"Original photographs supplied by the Pujo committee.":`${photos.length} original photographs from the judging and field visits.`} Tap to view full size.</p></div>
+    <div className="ipgc-profile-section-heading"><span>03 / THROUGH THE LENS</span><h2>{fromCommittee?"Pujo photographs":"Field photography"}</h2><p>{fromCommittee?"Original photographs supplied by the Pujo committee.":`${photos.length} original photographs from the judging and field visits.`} Tap to browse photographs.</p></div>
     <FinalistAlbum photos={photos} name={f.name}/>
    </section>
    <p className="ipgc-profile-source">Registration reference {f.registration} · Information as supplied by the participating committee.</p>

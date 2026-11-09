@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {finalists,finalistAwards} from "./finalists";
 import {loadPublishedAlbums} from "./ipgc-gallery";
+import PhotoStage from "./photo-stage";
 export const dynamic="force-dynamic";
 export default async function Home(){
  const albums=await loadPublishedAlbums();
@@ -16,7 +17,7 @@ export default async function Home(){
    <div className="ipgc-finalists-heading"><span>IPGC SHYAMA SAMMAN 2026</span><h2>Meet the Top 15</h2><p>Explore each finalist's registered information, location and field photography updates.</p></div>
    <div className="ipgc-finalists-grid">
     {finalists.map((f,i)=>{const photos=albums[f.registration]??[];const cover=photos[0];return <Link className={`ipgc-finalist-tile${finalistAwards[f.slug]?" ipgc-finalist-awarded":""}`} href={`/pujo/${f.slug}`} key={f.slug}>
-     <span className="ipgc-finalist-visual">{cover?<img src={cover.src} alt="" loading="lazy"/>:<span className="placeholder">{String(i+1).padStart(2,"0")}</span>}</span>
+     <span className="ipgc-finalist-visual">{cover?<PhotoStage photo={cover} variant="thumb"/>:<span className="placeholder">{String(i+1).padStart(2,"0")}</span>}</span>
      <span className="ipgc-finalist-content"><small>TOP 15 FINALIST · {String(i+1).padStart(2,"0")}</small><h3>{f.name}</h3><p>{f.area}</p>{finalistAwards[f.slug]&&<span className="ipgc-finalist-award"><span className="ipgc-award-icon" aria-hidden="true">🏆</span><strong>{finalistAwards[f.slug]}</strong></span>}</span>
      <span aria-hidden="true" className="ipgc-finalist-arrow">↗</span>
     </Link>})}
