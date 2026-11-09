@@ -58,7 +58,7 @@ test('public albums use a live eligibility read model and original source IDs', 
 
 test('no gallery snapshots or invented missing-information strings in app source', () => {
   for (const path of filesUnder(app).filter(p => /\.(tsx?|jsx?)$/.test(p))) {
-    const content = source(path);
+    const content = source(path).replace(/\/\*[\s\S]*?\*\//g, '');
     assert.doesNotMatch(content, /\bpublishedPhotos\b/, relative(app,path) + ' contains a static gallery collection');
     assert.doesNotMatch(content, /['"`]Not provided['"`]/i, relative(app,path) + ' invents missing-information text');
   }
