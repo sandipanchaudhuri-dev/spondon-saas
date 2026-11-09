@@ -1,6 +1,9 @@
 import Link from "next/link";
 import {finalists,finalistAwards} from "./finalists";
-export default function Home(){
+import {loadPublishedAlbums} from "./ipgc-gallery";
+export const dynamic="force-dynamic";
+export default async function Home(){
+ const albums=await loadPublishedAlbums();
  return <main className="ipgc-landing">
   <img className="ipgc-landing-hero" src="/ipgc-shyama-samman-2026-top15.jpg" alt="IPGC Shyama Samman 2026 — official Top 15 selected clubs and mandaps" width={1122} height={1402} fetchPriority="high" />
   <section className="ipgc-top15-announcement" aria-label="Top 15 announcement">
@@ -12,11 +15,11 @@ export default function Home(){
   <section className="ipgc-finalists" aria-label="Individual Top 15 Pujo profiles">
    <div className="ipgc-finalists-heading"><span>IPGC SHYAMA SAMMAN 2026</span><h2>Meet the Top 15</h2><p>Explore each finalist's registered information, location and field photography updates.</p></div>
    <div className="ipgc-finalists-grid">
-    {finalists.map((f,i)=><Link className={`ipgc-finalist-tile${finalistAwards[f.slug]?" ipgc-finalist-awarded":""}`} href={`/pujo/${f.slug}`} key={f.slug}>
-     <span className="ipgc-finalist-visual">{f.publishedPhotos.length?<img src={(f.publishedPhotos.find(p=>p.alt.toLowerCase().includes("field visit"))||f.publishedPhotos[0]).src} alt="" loading="lazy"/>:<span className="placeholder">{String(i+1).padStart(2,"0")}</span>}</span>
+    {finalists.map((f,i)=>{const photos=albums[f.registration]??[];const cover=photos[0];return <Link className={`ipgc-finalist-tile${finalistAwards[f.slug]?" ipgc-finalist-awarded":""}`} href={`/pujo/${f.slug}`} key={f.slug}>
+     <span className="ipgc-finalist-visual">{cover?<img src={cover.src} alt="" loading="lazy"/>:<span className="placeholder">{String(i+1).padStart(2,"0")}</span>}</span>
      <span className="ipgc-finalist-content"><small>TOP 15 FINALIST · {String(i+1).padStart(2,"0")}</small><h3>{f.name}</h3><p>{f.area}</p>{finalistAwards[f.slug]&&<span className="ipgc-finalist-award"><span className="ipgc-award-icon" aria-hidden="true">🏆</span><strong>{finalistAwards[f.slug]}</strong></span>}</span>
      <span aria-hidden="true" className="ipgc-finalist-arrow">↗</span>
-    </Link>)}
+    </Link>})}
    </div>
   </section>
  </main>

@@ -3,7 +3,9 @@ import {notFound} from "next/navigation";
 import type {Metadata} from "next";
 import {finalists,finalistAwards,mapHref} from "../../finalists";
 import FinalistAlbum from "./finalist-album";
+import {loadPublishedAlbums} from "../../ipgc-gallery";
 export const dynamicParams=false;
+export const dynamic="force-dynamic";
 export function generateStaticParams(){return finalists.map(f=>({slug:f.slug}));}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
  const {slug}=await params;const f=finalists.find(v=>v.slug===slug);
@@ -11,8 +13,10 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 }
 export default async function PujoProfile({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const f=finalists.find(v=>v.slug===slug);if(!f)notFound();
+ const albums=await loadPublishedAlbums();
+ const photos=albums[f.registration]??[];
  const fromCommittee=f.registration==="IPGC-SS-2026-00046";
- const image=f.publishedPhotos.find(p=>p.alt.toLowerCase().includes("field visit"))||f.publishedPhotos[0];
+ const image=photos.find(p=>p.alt.toLowerCase().includes("field visit"))||photos[0];
  return <main className="ipgc-profile-page">
   <nav className="ipgc-profile-nav" aria-label="Profile navigation"><Link href="/">← All finalists</Link><span>SHYAMA SAMMAN · 2026</span></nav>
   <article className="ipgc-profile">
@@ -22,7 +26,7 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
      <h1>{f.name}</h1>
      <p className="ipgc-profile-area"><span aria-hidden="true">⌖ </span>{f.area}</p>
      {finalistAwards[f.slug]&&<div className="ipgc-profile-award"><span className="ipgc-award-icon" aria-hidden="true">🏆</span><strong>{finalistAwards[f.slug]}</strong></div>}
-     <div className="ipgc-profile-intro"><span>{f.established?"EST. "+f.established:"2026 FINALIST"}</span><span>{f.publishedPhotos.length} {f.publishedPhotos.length===1?"PHOTOGRAPH":"PHOTOGRAPHS"}</span></div>
+     <div className="ipgc-profile-intro"><span>{f.established?"EST. "+f.established:"2026 FINALIST"}</span><span>{photos.length} {photos.length===1?"PHOTOGRAPH":"PHOTOGRAPHS"}</span></div>
     </div>
     {image?<a className="ipgc-profile-feature" href="#photo-album" aria-label="Browse field photographs"><img src={image.src} alt={image.alt}/><span>EXPLORE THE PHOTO ALBUM <b>↘</b></span></a>:
      <div className="ipgc-profile-feature ipgc-profile-feature-empty"><span>Photographs to follow</span></div>}
@@ -44,8 +48,8 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
     </a></div>
    </section>
    <section id="photo-album" className="ipgc-profile-album" aria-label="Photo album">
-    <div className="ipgc-profile-section-heading"><span>03 / THROUGH THE LENS</span><h2>{fromCommittee?"Pujo photographs":"Field photography"}</h2><p>{fromCommittee?"Original photographs supplied by the Pujo committee.":`${f.publishedPhotos.length} original photographs from the judging and field visits.`} Tap to view full size.</p></div>
-    <FinalistAlbum photos={f.publishedPhotos} name={f.name}/>
+    <div className="ipgc-profile-section-heading"><span>03 / THROUGH THE LENS</span><h2>{fromCommittee?"Pujo photographs":"Field photography"}</h2><p>{fromCommittee?"Original photographs supplied by the Pujo committee.":`${photos.length} original photographs from the judging and field visits.`} Tap to view full size.</p></div>
+    <FinalistAlbum photos={photos} name={f.name}/>
    </section>
    <p className="ipgc-profile-source">Registration reference {f.registration} · Information as supplied by the participating committee.</p>
   </article>
