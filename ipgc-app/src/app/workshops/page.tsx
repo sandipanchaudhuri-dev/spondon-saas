@@ -1,4 +1,1 @@
-import type {Metadata} from "next";
-import {GroupSection} from "../group-site";
-export const metadata:Metadata={title:"Photography Workshops | IPGC",description:"IPGC's 894th photography workshop, The Naughty Santa, on 6 December 2026 in Kolkata. Workshop information and enquiries."};
-export default function Page(){return <GroupSection section="academy"/>}
+import type {Metadata} from "next";import {GroupNav,GroupFooter} from "../group-site";import {publishedWorkshops} from "../../lib/workshop-engine";import {WorkshopListing} from "../workshop-engine-view";export const dynamic="force-dynamic";export const metadata:Metadata={title:"Photography Workshops | IPGC",description:"Explore upcoming IPGC photography workshops and masterclasses."};export default async function Page(){const rows=await publishedWorkshops();return <div className="group-site"><GroupNav active="/workshops"/><WorkshopListing workshops={rows}/><GroupFooter/></div>}
