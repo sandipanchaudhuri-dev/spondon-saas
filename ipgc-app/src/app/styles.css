@@ -1,7 +1,7 @@
-:root{color-scheme:light;--ink:#322122;--red:#681827;--gold:#b38a48}*{box-sizing:border-box}body{margin:0;background:#f8f4ee;color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit}header{background:#220d16;color:#fff;padding:17px max(20px,calc((100vw - 1000px)/2));display:flex;align-items:center;justify-content:space-between;gap:14px}header strong{font-size:17px;letter-spacing:.08em}.small{font-size:12px;color:#76636a}.head-link{color:#f4dfb6;font-size:13px}.hero{background:radial-gradient(ellipse at 80% 30%,#a66d35 0,#511522 35%,#1b0913 90%);color:#fff;text-align:center;padding:72px 20px 80px;border-bottom:5px solid #c69a55}.hero .eyebrow{letter-spacing:.24em;color:#e1c387;font-size:12px}.hero h1{font-family:Georgia,serif;font-size:clamp(35px,7vw,65px);line-height:1.1;margin:18px 0;color:#f6e2ab}.hero p{color:#f4e6db}.container{width:min(810px,calc(100% - 28px));margin:35px auto 65px}.card{background:#fff;border-radius:16px;box-shadow:0 12px 40px #371a2118;padding:clamp(20px,4vw,38px);margin:20px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}.field label{font-size:13px;font-weight:700}.field input,.field textarea{font:inherit;border:1px solid #d5c9c3;background:#fff;border-radius:8px;padding:12px;width:100%;color:#24191b}.field input:focus,.field textarea:focus{outline:2px solid #b79a71;outline-offset:1px}.field textarea{min-height:90px}.card h2{font-family:Georgia,serif;color:#662333;margin-top:0}section.intro{line-height:1.7}button,.button{background:var(--red);color:white;border:0;border-radius:9px;padding:14px 20px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}button:disabled{opacity:.5;cursor:not-allowed}.error{color:#a31630;background:#fff0ef;padding:12px;border-radius:8px}.success{color:#17613a;background:#e8f7ed;padding:16px;border-radius:8px}.hint{font-size:12px;color:#7d6a70}details{border:1px solid #ded1c8;padding:14px;border-radius:10px;margin-bottom:18px}summary{cursor:pointer;font-weight:bold}footer{padding:28px;text-align:center;color:#746268;font-size:12px} .contactbox{border:1px solid #e5d9ce;border-radius:12px;padding:16px;margin-bottom:16px} .contactbox h3{margin-top:0} .check{display:flex;align-items:flex-start;gap:12px;line-height:1.5} .check input{margin-top:5px} @media(max-width:600px){.grid{grid-template-columns:1fr}.hero{padding:55px 14px}header{padding:17px 20px}}
-.hero-image{background:#230910;line-height:0;text-align:center}.hero-image img{display:block;width:100%;max-width:1500px;height:auto;margin:auto;object-fit:contain}@media(max-width:600px){.hero-image img{width:100%;height:auto}}
+:root{color-scheme:light;--ink:#322122;--red:#a81423;--gold:#cda454}*{box-sizing:border-box}body{margin:0;background:#f8f4ee;color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit}header{background:#100909;color:#fff;padding:17px max(20px,calc((100vw - 1000px)/2));display:flex;align-items:center;justify-content:space-between;gap:14px}header strong{font-size:17px;letter-spacing:.08em}.small{font-size:12px;color:#76636a}.head-link{color:#f4dfb6;font-size:13px}.hero{background:radial-gradient(ellipse at 80% 30%,#a66d35 0,#511522 35%,#1b0913 90%);color:#fff;text-align:center;padding:72px 20px 80px;border-bottom:5px solid #c69a55}.hero .eyebrow{letter-spacing:.24em;color:#e1c387;font-size:12px}.hero h1{font-family:Georgia,serif;font-size:clamp(35px,7vw,65px);line-height:1.1;margin:18px 0;color:#f6e2ab}.hero p{color:#f4e6db}.container{width:min(810px,calc(100% - 28px));margin:35px auto 65px}.card{background:#fff;border-radius:16px;box-shadow:0 12px 40px #371a2118;padding:clamp(20px,4vw,38px);margin:20px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}.field label{font-size:13px;font-weight:700}.field input,.field textarea{font:inherit;border:1px solid #d5c9c3;background:#fff;border-radius:8px;padding:12px;width:100%;color:#24191b}.field input:focus,.field textarea:focus{outline:2px solid #b79a71;outline-offset:1px}.field textarea{min-height:90px}.card h2{font-family:Georgia,serif;color:#662333;margin-top:0}section.intro{line-height:1.7}button,.button{background:var(--red);color:white;border:0;border-radius:9px;padding:14px 20px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}button:disabled{opacity:.5;cursor:not-allowed}.error{color:#a31630;background:#fff0ef;padding:12px;border-radius:8px}.success{color:#17613a;background:#e8f7ed;padding:16px;border-radius:8px}.hint{font-size:12px;color:#7d6a70}details{border:1px solid #ded1c8;padding:14px;border-radius:10px;margin-bottom:18px}summary{cursor:pointer;font-weight:bold}footer{padding:28px;text-align:center;color:#746268;font-size:12px} .contactbox{border:1px solid #e5d9ce;border-radius:12px;padding:16px;margin-bottom:16px} .contactbox h3{margin-top:0} .check{display:flex;align-items:flex-start;gap:12px;line-height:1.5} .check input{margin-top:5px} @media(max-width:600px){.grid{grid-template-columns:1fr}.hero{padding:55px 14px}header{padding:17px 20px}}
+.hero-image{background:#110809;line-height:0;text-align:center}.hero-image img{display:block;width:100%;max-width:1500px;height:auto;margin:auto;object-fit:contain}@media(max-width:600px){.hero-image img{width:100%;height:auto}}
 /* IPGC standalone event landing: one hero and one action */
-.ipgc-landing{min-height:100svh;background:#1e0710;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,3vw,30px);padding:clamp(12px,3vw,30px)}
+.ipgc-landing{min-height:100svh;background:#0d0909;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,3vw,30px);padding:clamp(12px,3vw,30px)}
 .ipgc-landing-hero{display:block;width:min(100%,1280px);height:auto;object-fit:contain;border-radius:4px}
 .ipgc-landing-action{background:#b99551;color:#230c16;padding:16px 38px;border-radius:100px;font-size:clamp(17px,2.4vw,21px);font-weight:800;text-decoration:none;box-shadow:0 8px 30px #0007;transition:background .2s,transform .2s}
 .ipgc-landing-action:hover{background:#e4c67b;transform:translateY(-2px)}
@@ -9,7 +9,7 @@
 @media(max-width:600px){.ipgc-landing{justify-content:flex-start;padding:20px 12px;gap:25px}.ipgc-landing-action{width:min(100%,340px);text-align:center}}
 
 .ipgc-home-links{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
-.ipgc-home-admin{color:#f1d9ac;border:1px solid #b99551;border-radius:100px;padding:15px 28px;font-weight:650;text-decoration:none;background:#220d16}
+.ipgc-home-admin{color:#f1d9ac;border:1px solid #b99551;border-radius:100px;padding:15px 28px;font-weight:650;text-decoration:none;background:#100909}
 .ipgc-home-admin:hover{background:#3b1924}
 .ipgc-home-admin:focus-visible{outline:3px solid white;outline-offset:4px}
 @media(max-width:600px){.ipgc-home-links{width:100%;flex-direction:column}.ipgc-home-links a{width:min(100%,340px);text-align:center}}
@@ -17,7 +17,7 @@
 /* Shared site credit on home, registration and private admin pages */
 .ipgc-site{min-height:100svh;display:flex;flex-direction:column}
 .ipgc-site-content{flex:1;min-height:0}
-.ipgc-global-footer{margin:0;background:#220d16;color:#f1d9ac;text-align:center;padding:18px 16px;font-size:13px;line-height:1.55}
+.ipgc-global-footer{margin:0;background:#080808;color:#e5bd70;border-top:1px solid #4e3921;text-align:center;padding:18px 16px;font-size:13px;line-height:1.55}
 .ipgc-global-footer a{color:inherit;text-decoration:none;text-underline-offset:3px}
 .ipgc-global-footer a:hover,.ipgc-global-footer a:focus-visible{text-decoration:underline}
 
@@ -41,7 +41,7 @@ body>.ipgc-countdown{max-width:none}
 
 /* IPGC Shyama Samman / compact PujoVerse-inspired heritage editorial profile.
    Scope exclusively to finalist screens. Locked homepage artwork is untouched. */
-.ipgc-landing{background:#1e0710}
+.ipgc-landing{background:#0d0909}
 .ipgc-finalists{width:min(100%,1040px);color:#f3e5d0;padding:24px 0 64px}
 .ipgc-finalists-heading{padding:16px 8px 27px;text-align:left;border-top:1px solid #80504a}
 .ipgc-finalists-heading span{font:700 11px/1.5 Arial,sans-serif;letter-spacing:.16em;color:#d2ae80}
@@ -60,10 +60,10 @@ body>.ipgc-countdown{max-width:none}
 .ipgc-finalist-arrow{align-self:center;color:#83563c;padding:12px;font-size:22px}
 .ipgc-profile-page{min-height:100svh;padding:0 16px 45px;color:#34282b;background:#f4eee6}
 .ipgc-profile-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(100%,1000px);margin:auto;padding:21px 0;color:#8a6662;font-size:12px}
-.ipgc-profile-nav a,.ipgc-profile-return a{color:#693140;text-decoration:none;font-weight:700}
+.ipgc-profile-nav a,.ipgc-profile-return a{color:#91212c;text-decoration:none;font-weight:700}
 .ipgc-profile-nav span{color:#997959;letter-spacing:.1em;font-size:10px;text-align:right;font-weight:800}
 .ipgc-profile{width:min(100%,1000px);margin:auto;background:#fffaf3;border:1px solid #e3d7c9;border-radius:14px;overflow:hidden;box-shadow:0 8px 28px rgba(54,24,32,.06)}
-.ipgc-profile-identity{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);background:#291923;min-height:365px}
+.ipgc-profile-identity{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);background:#24090c;min-height:365px}
 .ipgc-profile-identity-copy{align-self:center;padding:clamp(26px,4vw,55px);min-width:0;color:#f9f0e1}
 .ipgc-profile-eyebrow{color:#d6b889;font:700 11px/1.5 Arial,sans-serif;letter-spacing:.13em}
 .ipgc-profile-identity h1{margin:12px 0 12px;font:700 clamp(31px,4vw,52px)/1.12 Georgia,'Noto Serif Bengali',serif;letter-spacing:-.024em;overflow-wrap:anywhere;color:#ffe6b5}
@@ -159,3 +159,6 @@ body>.ipgc-countdown{max-width:none}
 .ipgc-lightbox-stage>.ipgc-photo-stage .ipgc-photo-sharp{object-fit:contain}
 @media(max-width:690px){.ipgc-photo-brand-top img{height:32px;width:98px}.ipgc-photo-brand-bottom img{height:32px;width:40px}}
 @media(prefers-reduced-motion:reduce){.ipgc-photo-sharp{transition:none}}
+
+/* Match the IPGC red/black/gold brand on the public archive while retaining readable light detail panels and forms. */
+.ipgc-landing .ipgc-profile-nav a{color:#edc878}.ipgc-landing .ipgc-profile-nav{color:#e3ca9e}.ipgc-finalist-tile{background:#181111;color:#f7efe4;border-color:#583d26}.ipgc-finalist-content h3{color:#fff3e1}.ipgc-finalist-content small{color:#e6ba69}.ipgc-finalist-content p{color:#d1c0b3}.ipgc-finalist-arrow{color:#d8ad5f}.ipgc-finalist-award{color:#efc46e}.ipgc-finalist-visual{background:#241414}.ipgc-finalist-visual .placeholder{color:#e5be79}
