@@ -57,7 +57,7 @@ body>.ipgc-countdown{max-width:none}
 .ipgc-finalist-content small{color:#815c4e;font-size:12px;letter-spacing:.06em;font-weight:800}
 .ipgc-finalist-content h3{margin:5px 0 4px;color:#37202c;font:700 19px/1.23 Georgia,serif;overflow-wrap:anywhere}
 .ipgc-finalist-content p{font-size:12px;color:#7c6461;margin:0}
-.ipgc-finalist-arrow{align-self:center;color:#83563c;padding:12px;font-size:22px}
+
 .ipgc-profile-page{min-height:100svh;padding:0 16px 45px;color:#34282b;background:#f4eee6}
 .ipgc-profile-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(100%,1000px);margin:auto;padding:21px 0;color:#8a6662;font-size:12px}
 .ipgc-profile-nav a,.ipgc-profile-return a{color:#91212c;text-decoration:none;font-weight:700}
@@ -94,7 +94,7 @@ body>.ipgc-countdown{max-width:none}
 .ipgc-album-thumb>.ipgc-photo-stage{width:100%;height:100%}
 .ipgc-album-thumb:hover .ipgc-photo-sharp{transform:scale(1.015)}
 .ipgc-album-thumb:focus-visible{outline:3px solid #9b714b;outline-offset:3px}
-.ipgc-album-zoom{position:absolute;bottom:9px;right:9px;display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:#fffdf3df;color:#4c2533;font-size:17px}
+
 .ipgc-album-empty{padding:22px;background:#f1e7dc;border:1px solid #e5d7c7;border-radius:10px;font-size:14px;color:#6b5a58}
 .ipgc-lightbox{position:fixed;inset:0;margin:auto;border:0;padding:0;width:100vw;max-width:none;height:100dvh;max-height:none;background:#111016;color:#fff;overflow:hidden}
 .ipgc-lightbox::backdrop{background:#080609e8}
@@ -161,4 +161,4 @@ body>.ipgc-countdown{max-width:none}
 @media(prefers-reduced-motion:reduce){.ipgc-photo-sharp{transition:none}}
 
 /* Match the IPGC red/black/gold brand on the public archive while retaining readable light detail panels and forms. */
-.ipgc-landing .ipgc-profile-nav a{color:#edc878}.ipgc-landing .ipgc-profile-nav{color:#e3ca9e}.ipgc-finalist-tile{background:#181111;color:#f7efe4;border-color:#583d26}.ipgc-finalist-content h3{color:#fff3e1}.ipgc-finalist-content small{color:#e6ba69}.ipgc-finalist-content p{color:#d1c0b3}.ipgc-finalist-arrow{color:#d8ad5f}.ipgc-finalist-award{color:#efc46e}.ipgc-finalist-visual{background:#241414}.ipgc-finalist-visual .placeholder{color:#e5be79}
+.ipgc-landing .ipgc-profile-nav a{color:#edc878}.ipgc-landing .ipgc-profile-nav{color:#e3ca9e}.ipgc-finalist-tile{background:#181111;color:#f7efe4;border-color:#583d26}.ipgc-finalist-content h3{color:#fff3e1}.ipgc-finalist-content small{color:#e6ba69}.ipgc-finalist-content p{color:#d1c0b3}.ipgc-finalist-award{color:#efc46e}.ipgc-finalist-visual{background:#241414}.ipgc-finalist-visual .placeholder{color:#e5be79}

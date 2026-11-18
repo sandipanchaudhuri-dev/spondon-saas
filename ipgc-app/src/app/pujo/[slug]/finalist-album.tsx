@@ -20,7 +20,7 @@ export default function FinalistAlbum({photos,name}:{photos:readonly PublishedPh
   <div className="ipgc-album-grid" aria-label={name+" photo gallery"}>
    {photos.map((photo,index)=><button className="ipgc-album-thumb" key={photo.kind+photo.id} type="button" onClick={()=>setSelected(index)} aria-label={"Open photograph "+(index+1)+" of "+photos.length}>
     <PhotoStage photo={photo} variant="thumb"/>
-    <span className="ipgc-album-zoom" aria-hidden="true">↗</span>
+    
    </button>)}
   </div>
   <dialog ref={dialog} className="ipgc-lightbox" aria-label={name+" photo viewer"} onClose={()=>setSelected(null)} onClick={e=>{if(e.currentTarget===e.target)setSelected(null)}}>

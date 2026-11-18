@@ -59,3 +59,7 @@ Confirm final menu labels; approved logos and visual direction; unit owners and 
 
 ## 13. Approval
 Business owner: Mr. Sourav Mukherjee (proposed approver). Technical owner: to be confirmed. This BRD is a scope baseline for review, not authorization to implement or deploy.
+
+
+### Approved UI guardrail — 18 November 2026
+Do not use decorative arrows, Unicode emoji or redundant icons on cards, links, buttons, headings or navigation. Prefer clear labels, focus and hover states. Icons are reserved for genuine functional controls (e.g. previous/next gallery controls) or meaningful status indicators.

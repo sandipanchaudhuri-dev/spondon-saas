@@ -33,7 +33,7 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
  const hasCreative=Boolean(info.theme||info.theme_artist||info.idol_artist||info.established_year);
  const locationUrl=registeredMapHref(info);
  return <main className="ipgc-profile-page">
-  <nav className="ipgc-profile-nav" aria-label="Profile navigation"><Link href="/shyama-samman">← All finalists</Link><span>SHYAMA SAMMAN · 2026</span></nav>
+  <nav className="ipgc-profile-nav" aria-label="Profile navigation"><Link href="/shyama-samman">All finalists</Link><span>SHYAMA SAMMAN · 2026</span></nav>
   <article className="ipgc-profile">
    <header className="ipgc-profile-identity">
     <div className="ipgc-profile-identity-copy">
@@ -43,7 +43,7 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
      {finalistAwards[finalist.slug]&&<div className="ipgc-profile-award"><span className="ipgc-award-icon" aria-hidden="true">🏆</span><strong>{finalistAwards[finalist.slug]}</strong></div>}
      <div className="ipgc-profile-intro"><span>{info.established_year?"EST. "+info.established_year:"2026 FINALIST"}</span><span>{photoList.length} {photoList.length===1?"PHOTOGRAPH":"PHOTOGRAPHS"}</span></div>
     </div>
-    {image?<a className="ipgc-profile-feature" href="#photo-album" aria-label="Browse photographs"><PhotoStage photo={image} variant="hero"/><span className="ipgc-feature-linklabel">EXPLORE THE PHOTO ALBUM <b>↘</b></span></a>:
+    {image?<a className="ipgc-profile-feature" href="#photo-album" aria-label="Browse photographs"><PhotoStage photo={image} variant="hero"/><span className="ipgc-feature-linklabel">EXPLORE THE PHOTO ALBUM</span></a>:
      <div className="ipgc-profile-feature ipgc-profile-feature-empty"><span>Photographs to follow</span></div>}
    </header>
    {hasCreative&&<section className="ipgc-profile-main" aria-label="Registered creative information">
@@ -59,7 +59,7 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
     <div className="ipgc-profile-section-heading"><span>02 / VISIT</span><h2>Find this Pujo</h2></div>
     <div className="ipgc-profile-location-row"><p>{address}</p>{locationUrl&&<a className="ipgc-location-link" href={locationUrl} target="_blank" rel="noopener noreferrer" aria-label={"Search registered location for "+name+" on Google Maps"}>
      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-     {info.maps_url?"Open registered Google Maps link":"Search registered location"} <span aria-hidden="true">↗</span>
+     {info.maps_url?"Open registered Google Maps link":"Search registered location"}
     </a>}</div>
    </section>
    <section id="photo-album" className="ipgc-profile-album" aria-label="Photo album">
@@ -68,6 +68,6 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
    </section>
    <p className="ipgc-profile-source">Registration reference {finalist.registration} · Information from the live IPGC registration database.{!hasCreative?" Theme, artist and establishment details were not recorded with this registration.":""}</p>
   </article>
-  <div className="ipgc-profile-return"><Link href="/shyama-samman">← Discover the other finalists</Link></div>
+  <div className="ipgc-profile-return"><Link href="/shyama-samman">Discover the other finalists</Link></div>
  </main>;
 }
