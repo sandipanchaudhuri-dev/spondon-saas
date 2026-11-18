@@ -10,6 +10,8 @@ const details = [
  {label:"Fee",value:"₹3,500 · Lunch included"}
 ] as const;
 
+const whatsappEnquiryUrl = "https://wa.me/919830775666?text=" + encodeURIComponent("Hello IPGC, I would like to enquire about The Naughty Santa — 894th Photography Workshop on 6 December 2026 in Kolkata. Please share availability and registration details.");
+
 export function WorkshopContent(){
  return <>
   <section className="ws-intro">
@@ -19,8 +21,7 @@ export function WorkshopContent(){
     <p className="ws-subhead">A Photography Workshop</p>
     <p className="ws-description">A Christmas-themed fashion and portrait photography workshop with model Sanchita Bose, mentored by Sourav Mukherjee in Kolkata.</p>
     <div className="ws-eventline"><strong>06 DEC 2026</strong><span>Sunday · From 12 noon</span></div>
-    <a className="group-button" href="tel:+919830775666">Enquire by phone</a>
-    <a className="ws-secondary" href="#workshop-information">Workshop details</a>
+    <div className="ws-actions"><a className="group-button" href={whatsappEnquiryUrl} target="_blank" rel="noopener noreferrer" aria-label="Enquire on WhatsApp about The Naughty Santa workshop">Message on WhatsApp</a><a className="ws-secondary" href="tel:+919830775666">Call organiser</a><a className="ws-secondary" href="#workshop-information">Workshop details</a></div>
    </div>
    <div className="ws-poster">
     <img src="/brand/ipgc-naughty-santa-workshop-2026.jpg" width={1086} height={1448} fetchPriority="high" alt="Original IPGC Incluséa The Naughty Santa workshop artwork, featuring model Sanchita Bose, mentor Sourav Mukherjee, event details and fee"/>
@@ -32,7 +33,7 @@ export function WorkshopContent(){
   </section>
   <section className="ws-enquiry">
    <div><span className="group-kicker">PARTICIPATION & ENQUIRIES</span><h2>Join the workshop</h2><p>For availability, registration and payment arrangements, contact the organisers directly.</p></div>
-   <div className="ws-contacts"><a href="tel:+919830775666">+91 98307 75666</a><a href="tel:+919830449955">+91 98304 49955</a><p>Workshop fee: ₹3,500, including lunch.</p></div>
+   <div className="ws-contacts"><a className="ws-whatsapp-contact" href={whatsappEnquiryUrl} target="_blank" rel="noopener noreferrer">Message on WhatsApp (+91 98307 75666)</a><a href="tel:+919830775666">Call +91 98307 75666</a><a href="tel:+919830449955">Call +91 98304 49955</a><p>WhatsApp opens with an enquiry message ready to send. Workshop fee: ₹3,500, including lunch.</p></div>
   </section>
  </>;
 }
