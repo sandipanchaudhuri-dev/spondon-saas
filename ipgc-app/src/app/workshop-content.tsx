@@ -12,6 +12,9 @@ const details = [
 
 const whatsappEnquiryUrl = "https://wa.me/919830775666?text=" + encodeURIComponent("Hello IPGC, I would like to enquire about The Naughty Santa — 894th Photography Workshop on 6 December 2026 in Kolkata. Please share availability and registration details.");
 
+function WhatsAppIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M20.1 11.6a8.1 8.1 0 0 1-11.9 7.2L4 20l1.3-4a8.1 8.1 0 1 1 14.8-4.4Z"/><path d="M9.1 8.5c-.3-.4-.6-.4-.9-.1-.4.4-.6 1-.4 1.7.4 1.7 2.7 4.4 4.6 5.1.7.3 1.5.2 2-.3.3-.3.5-.8.2-1.1l-1.6-.8c-.3-.1-.5.2-.8.5-.2.2-.3.3-.6.1a7 7 0 0 1-2.5-2.4c-.2-.3-.1-.5.2-.8.3-.3.4-.5.2-.8Z"/></svg>}
+function CallIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M21 16.2v2.6a2 2 0 0 1-2.2 2 18 18 0 0 1-15.6-15.6A2 2 0 0 1 5.2 3h2.6a2 2 0 0 1 2 1.7l.5 2.4a2 2 0 0 1-.6 1.8L8.2 10a14 14 0 0 0 5.8 5.8l1.1-1.5a2 2 0 0 1 1.8-.6l2.4.5a2 2 0 0 1 1.7 2Z"/></svg>}
+
 export function WorkshopContent(){
  return <>
   <section className="ws-intro">
@@ -21,7 +24,7 @@ export function WorkshopContent(){
     <p className="ws-subhead">A Photography Workshop</p>
     <p className="ws-description">A Christmas-themed fashion and portrait photography workshop with model Sanchita Bose, mentored by Sourav Mukherjee in Kolkata.</p>
     <div className="ws-eventline"><strong>06 DEC 2026</strong><span>Sunday · From 12 noon</span></div>
-    <div className="ws-actions"><a className="group-button" href={whatsappEnquiryUrl} target="_blank" rel="noopener noreferrer" aria-label="Enquire on WhatsApp about The Naughty Santa workshop">Message on WhatsApp</a><a className="ws-secondary" href="tel:+919830775666">Call organiser</a><a className="ws-secondary" href="#workshop-information">Workshop details</a></div>
+    <div className="ws-action-area"><div className="ws-actions" aria-label="Workshop enquiries"><a className="ws-action ws-action-whatsapp" href={whatsappEnquiryUrl} target="_blank" rel="noopener noreferrer" aria-label="Enquire on WhatsApp about The Naughty Santa workshop"><span className="ws-action-icon"><WhatsAppIcon/></span><span>WhatsApp</span></a><a className="ws-action ws-action-call" href="tel:+919830775666" aria-label="Call workshop organiser"><span className="ws-action-icon"><CallIcon/></span><span>Call</span></a></div><a className="ws-details-link" href="#workshop-information">View workshop details</a></div>
    </div>
    <div className="ws-poster">
     <img src="/brand/ipgc-naughty-santa-workshop-2026.jpg" width={1086} height={1448} fetchPriority="high" alt="Original IPGC Incluséa The Naughty Santa workshop artwork, featuring model Sanchita Bose, mentor Sourav Mukherjee, event details and fee"/>
