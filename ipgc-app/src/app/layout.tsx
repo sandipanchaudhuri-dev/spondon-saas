@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./styles.css";
 export const metadata: Metadata = {
-  title: "IPGC | Shyama Samman 2026",
-  description: "Official IPGC Shyama Samman 2026 registration",
+  title: "IPGC | Inclusion Portfolios Glamour Consortium",
+  description: "Photography, publications, festival excellence, exhibitions and community welfare.",
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

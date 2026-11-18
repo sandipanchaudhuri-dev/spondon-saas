@@ -33,7 +33,7 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
  const hasCreative=Boolean(info.theme||info.theme_artist||info.idol_artist||info.established_year);
  const locationUrl=registeredMapHref(info);
  return <main className="ipgc-profile-page">
-  <nav className="ipgc-profile-nav" aria-label="Profile navigation"><Link href="/">← All finalists</Link><span>SHYAMA SAMMAN · 2026</span></nav>
+  <nav className="ipgc-profile-nav" aria-label="Profile navigation"><Link href="/shyama-samman">← All finalists</Link><span>SHYAMA SAMMAN · 2026</span></nav>
   <article className="ipgc-profile">
    <header className="ipgc-profile-identity">
     <div className="ipgc-profile-identity-copy">
@@ -68,6 +68,6 @@ export default async function PujoProfile({params}:{params:Promise<{slug:string}
    </section>
    <p className="ipgc-profile-source">Registration reference {finalist.registration} · Information from the live IPGC registration database.{!hasCreative?" Theme, artist and establishment details were not recorded with this registration.":""}</p>
   </article>
-  <div className="ipgc-profile-return"><Link href="/">← Discover the other finalists</Link></div>
+  <div className="ipgc-profile-return"><Link href="/shyama-samman">← Discover the other finalists</Link></div>
  </main>;
 }
